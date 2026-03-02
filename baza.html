@@ -1,24 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>baza</title>
-    <link rel="stylesheet" href="./style.css">
-    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Страница</title>
+        <link rel="stylesheet" href="database.css">
+        
     </head>
+<body>
 
-    <body>
-    <main>
-        <h1></h1>  
-    </main>
+    <div class="card">
+        <h1>Добавить пользователя</h1>
 
-    <div>
-        <h3 class = "card">Добавить пользователя</h3>
     </div>
 
-     <script src=""></script>
+    <div class="card">
+<form action="/register" method="post">
 
-    </body>
-</html>
+  <label for="name">Имя:</label><br>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="surname">Фамилия:</label><br>
+  <input type="text" id="surname" name="surname" required><br>
+
+  <label for="date">Дата рождения:</label><br>
+  <input type="date" id="date" name="date" required><br>
+
+  <label for="group">ID группы:</label><br>
+  <input type="number" id="group" name="group" required><br>
+
+  <input type="submit" value="Зарегистрироваться">
+</form>
+</div>
+
+</form>
+
+
+    <footer>
+        
+    </footer>
+</body>

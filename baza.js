@@ -1,4 +1,9 @@
-FormData.addEventListener("submit", async (e) => {
+const form = document.getElementById("registration_form");
+const out = document.getElementById("out");
+
+/*A102PCPREPOD\A102PCPREPOD*/
+
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const fd = new FormData(form);

@@ -4,9 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Страница</title>
-        <link rel="stylesheet" href="database.css">
-        
+        <title>Страница</title>
+        <link rel="stylesheet" href="baza.css">
     </head>
 <body>
 
@@ -16,28 +15,34 @@
     </div>
 
     <div class="card">
-<form action="/register" method="post">
+        <form id="registration_form">
 
-  <label for="name">Имя:</label><br>
-  <input type="text" id="name" name="name" required><br>
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br>
 
-  <label for="surname">Фамилия:</label><br>
-  <input type="text" id="surname" name="surname" required><br>
+        <label for="surname">Фамилия:</label><br>
+        <input type="text" id="surname" name="surname" required><br>
 
-  <label for="date">Дата рождения:</label><br>
-  <input type="date" id="date" name="date" required><br>
+        <label for="date">Дата рождения:</label><br>
+        <input type="date" id="date" name="date" required><br>
 
-  <label for="group">ID группы:</label><br>
-  <input type="number" id="group" name="group" required><br>
+        <label for="group">ID группы:</label><br>
+        <input type="number" id="group" name="group" required><br>
 
-  <input type="submit" value="Зарегистрироваться">
-</form>
-</div>
+        <input type="submit" value="Сохранить">
+        </form>
 
-</form>
+
+        
+    <pre id="out"></pre>
+
+    </div>
+
+<script src="./baza.js"></script>
 
 
     <footer>
         
     </footer>
 </body>
+</html>

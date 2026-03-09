@@ -10,7 +10,7 @@ app.listen(3000, () => {
 
 
 const dbConfig = {
-    server:"A102PCPREPOD\A102PCPREPOD";
+    server:"A102PCPREPOD\A102PCPREPOD",
     databaes:"TESTBOBR",
     driver:"msnodesqlv8",
     options:{
@@ -28,3 +28,19 @@ app.get("TESTBOBR", async (req,res) => {
     res.json(result.recordset);
 });
 
+
+
+app.post("/students", async (req,res) => {
+    const { name, lastname, birthday, group_id} = req.body;
+    const connection = await sql.connect(dbConfig);
+
+    await connection
+    .request()
+    .input("name", sql.VarChar, name)
+    .input("lastname", sql.VarChar, lastname)
+    .input("birthday", sql.date, birthday)
+    .input("group_id", sql.int, group_id).query(`INSERT INTO dbo.TESTBOBR(name,lastname,birthday,group_id) 
+    VALUES (@name, @lastname, @birthday, @group_id)`)
+
+    res.send("OK");
+});

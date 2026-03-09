@@ -13,10 +13,15 @@ form.addEventListener("submit", async (e) => {
         birthday: fd.get("birthday"),
         group_id: Number(fd.get("group_id")),
     };
-    const r = await fetch("http://localhost:3000/api/users", {
+
+    try {
+    const r = await fetch("/TESTBOBR", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(payload),
     });
     out.textContent = `HTTP ${r.ststus}\n${await r.text()}`;
+    } catch (error) {
+        out.textContent = "Error" + error.message;
+    }
 });

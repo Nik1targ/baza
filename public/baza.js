@@ -13,7 +13,7 @@ form.addEventListener("submit", async (e) => {
         birthday: fd.get("birthday"),
         group_id: Number(fd.get("group_id")),
     };
-    const r = await fetch("http://localhost:5000/api/users", {
+    const r = await fetch("http://localhost:3000/api/users", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(payload),

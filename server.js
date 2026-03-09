@@ -1,12 +1,16 @@
 const express = require("express");
 const sql = require("mssql");
+const path = require("path");
 
-const app = express();
-app.use(express.json());
 
 app.listen(3000, () => {
     console.log("Server started on port 3000!, http://localhost:3000");
 });
+
+const app = express();
+app.use(express.json());
+
+app.use(express.static(path.join(__dirname, "public")));
 
 
 const dbConfig = {
@@ -20,6 +24,7 @@ const dbConfig = {
     },
 };
 
+
 app.get("TESTBOBR", async (req,res) => {
     const connection = await sql.connection(dbConfig);
 
@@ -27,7 +32,6 @@ app.get("TESTBOBR", async (req,res) => {
 
     res.json(result.recordset);
 });
-
 
 
 app.post("/students", async (req,res) => {

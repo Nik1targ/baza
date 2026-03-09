@@ -1,5 +1,5 @@
 const express = require("express");
-const sql = require("mssql");
+const sql = require("mssql/msnodesqlv8");
 const path = require("path");
 
 
@@ -14,15 +14,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 const dbConfig = {
-    server:"A102PCPREPOD\A102PCPREPOD",
-    databaes:"TESTBOBR",
-    driver:"msnodesqlv8",
-    options:{
-        trustesConnction:true,
-        trustServerCertificate:true,
-
-    },
-};
+    connectionString:
+      "Driver={SQL Server};Server=A102PCPREPOD\\A102PCPREPOD;Database=students-Marina;Trusted_Connection=Yes;",
+    driver: "msnodesqlv8"
+  };
 
 
 app.get("TESTBOBR", async (req,res) => {

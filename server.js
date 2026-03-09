@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const dbConfig = {
     connectionString:
-      "Driver={SQL Server};Server=A102PCPREPOD\\A102PCPREPOD;Database=students-Marina;Trusted_Connection=Yes;",
+      "Driver={SQL Server};Server=A102PCPREPOD\\A102PCPREPOD;Database=TESTBOBR;Trusted_Connection=Yes;",
     driver: "msnodesqlv8"
   };
 
